@@ -46,7 +46,7 @@ def meta():
     return meta_config.get()
 
 
-@app.post("/answers/")
+@app.post("/generate/")
 async def read_item(item: GenerateInput, response: Response):
     try:
         response = await generate.do(item)
